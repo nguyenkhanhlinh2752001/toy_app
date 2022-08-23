@@ -1,0 +1,14 @@
+rails new toy_app
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/nguyenkhanhlinh2752001/toy_app.git
+git push -u origin main
+
+rails generate scaffold User name:string email:string
+rails db:migrate
+
+rails generate scaffold Micropost content:text user_id:integer
+rails db:migrate
